@@ -201,7 +201,7 @@ struct Overload : Funcs...
 template<typename... Funcs>
 auto overload(Funcs&&... funcs)
 {
-    return Overload<std::decay_t<Funcs>...>{std::forward<Funcs>(funcs)...};
+    return Overload<std::remove_cvref_t<Funcs>...>{std::forward<Funcs>(funcs)...};
 }
 
 }
