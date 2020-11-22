@@ -16,7 +16,7 @@ env:
   global:
    - secure: "R+NxqtytOslIcQ/eCbLoZhImsgYdJnljfjANdieFQGune9ACPPQL0YanXkF49c9SWGBSxrAcute0egQzv2CU2+ivSQIX/xnMebKHiOmSPYBoxX+VgxLT3U1itUYlpYwixo9rF8UnGdlgXid6oENSiCvfWtNKoM2qOL0Ttw31J9E="
 
-before_install: if [ "$CXX" = "g++" ]; then export CXX=g++-9; fi
+before_install: if [ "$CXX" = "g++" ]; then export CXX=g++-10; fi
 
 addons:
   apt:
@@ -24,7 +24,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - libstdc++-7-dev
-      - g++-9
+      - g++-10
       - libncursesw5-dev
   coverity_scan:
     project:
